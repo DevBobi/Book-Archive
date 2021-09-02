@@ -61,7 +61,7 @@ const displayBooks = books => {
                     <h5 class="card-title">${book.title}</h5>
                     <p class="card-text text-danger fst-italic"> <span class="text-dark">Author : </span>${book.author_name}</p>
                     <p class="card-text"><small class="text-muted">Published Year : ${book.first_publish_year}</small></p>
-                    <p class="card-text"><small class="text-muted">Publisher : ${book.publisher}</small></p>
+                    <p class="card-text"><small class="text-muted">Publisher : ${book.publisher.slice(0,5)}</small></p>
                 </div>
             </div>
         </div>
