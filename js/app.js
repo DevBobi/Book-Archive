@@ -1,7 +1,11 @@
 // Search Books
+const toggleResult = displayStyle => {
+    document.getElementById('display-result').style.display=displayStyle;
+}
 const searchBooks = () =>{
     const inputText = document.getElementById('input-field');
     const search = inputText.value;
+
     // clear input field
     inputText.value='';
     
@@ -55,8 +59,8 @@ const displayBooks = books => {
                 </div>
                 <div class="card-body col-md-6">
                     <h5 class="card-title">${book.title}</h5>
-                    <p class="card-text text-danger fst-italic">By: ${book.author_name}</p>
-                    <p class="card-text"><small class="text-muted">First published in ${book.first_publish_year}</small></p>
+                    <p class="card-text text-danger fst-italic"> <span class="text-dark">Author : </span>${book.author_name}</p>
+                    <p class="card-text"><small class="text-muted">Published Year : ${book.first_publish_year}</small></p>
                     <p class="card-text"><small class="text-muted">Publisher : ${book.publisher}</small></p>
                 </div>
             </div>
@@ -65,6 +69,7 @@ const displayBooks = books => {
         searchResult.appendChild(div);
         
     });
-   
+   // display toggleResult
+    toggleResult('block');
     
 }
