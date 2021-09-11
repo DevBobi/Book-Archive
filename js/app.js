@@ -49,6 +49,7 @@ const displayBooks = books => {
     // get single book  & dynamic data
     books.docs.slice(0,20).forEach(book => {
         // console.log(book);
+        
 
         
         const div = document.createElement('div');
