@@ -12,7 +12,7 @@ const searchBooks = () =>{
     
     const url = `https://openlibrary.org/search.json?q=${search}`;
     // console.log(url);
-//     fetch(url)
+    fetch(url)
     .then(res => res.json())
     .then(data => displayBooks(data));
 }
